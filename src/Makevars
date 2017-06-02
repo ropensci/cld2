@@ -1,0 +1,59 @@
+CXX_STD=CXX98
+PKG_LIBS=-L. -lcld2
+
+LIBCLD2 = \
+	libcld2/internal/cld_generated_cjk_delta_bi_32.o \
+	libcld2/internal/cld_generated_cjk_delta_bi_4.o \
+	libcld2/internal/cld_generated_cjk_uni_prop_80.o \
+	libcld2/internal/cld_generated_score_quad_octa_0122_2.o \
+	libcld2/internal/cld_generated_score_quad_octa_0122.o \
+	libcld2/internal/cld_generated_score_quad_octa_1024_256.o \
+	libcld2/internal/cld_generated_score_quad_octa_2.o \
+	libcld2/internal/cld2_do_score.o \
+	libcld2/internal/cld2_dynamic_data_extractor.o \
+	libcld2/internal/cld2_dynamic_data_loader.o \
+	libcld2/internal/cld2_dynamic_data_tool.o \
+	libcld2/internal/cld2_dynamic_data.o \
+	libcld2/internal/cld2_generated_cjk_compatible.o \
+	libcld2/internal/cld2_generated_deltaocta0122.o \
+	libcld2/internal/cld2_generated_deltaocta0527.o \
+	libcld2/internal/cld2_generated_deltaoctachrome.o \
+	libcld2/internal/cld2_generated_distinctocta0122.o \
+	libcld2/internal/cld2_generated_distinctocta0527.o \
+	libcld2/internal/cld2_generated_distinctoctachrome.o \
+	libcld2/internal/cld2_generated_octa2_dummy.o \
+	libcld2/internal/cld2_generated_quad0122.o \
+	libcld2/internal/cld2_generated_quad0720.o \
+	libcld2/internal/cld2_generated_quadchrome_16.o \
+	libcld2/internal/cld2_generated_quadchrome_2.o \
+	libcld2/internal/cld2_unittest_full.o \
+	libcld2/internal/cld2_unittest.o \
+	libcld2/internal/cldutil_offline.o \
+	libcld2/internal/cldutil_shared.o \
+	libcld2/internal/cldutil.o \
+	libcld2/internal/compact_lang_det_hint_code.o \
+	libcld2/internal/compact_lang_det_impl.o \
+	libcld2/internal/compact_lang_det_test.o \
+	libcld2/internal/compact_lang_det.o \
+	libcld2/internal/debug_empty.o \
+	libcld2/internal/debug.o \
+	libcld2/internal/fixunicodevalue.o \
+	libcld2/internal/generated_distinct_bi_0.o \
+	libcld2/internal/generated_entities.o \
+	libcld2/internal/generated_language.o \
+	libcld2/internal/generated_ulscript.o \
+	libcld2/internal/getonescriptspan.o \
+	libcld2/internal/lang_script.o \
+	libcld2/internal/offsetmap.o \
+	libcld2/internal/scoreonescriptspan.o \
+	libcld2/internal/scoreutf8text.o \
+	libcld2/internal/tote.o \
+	libcld2/internal/utf8statetable.o
+
+all: libcld2.a
+
+libcld2.a: $(LIBCLD2)
+	$(AR) rcs libcld2.a $(LIBCLD2)
+
+clean:
+	rm -f $(LIBCLD2) $(SHLIB) $(OBJECTS) libcld2.a

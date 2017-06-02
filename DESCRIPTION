@@ -1,0 +1,21 @@
+Package: cld2
+Type: Package
+Title: R Wrapper for Google's Compact Language Detector 2
+Version: 0.1
+Authors@R: c(
+    person("Jeroen", "Ooms", ,"jeroen@berkeley.edu", role = c("aut", "cre")),
+    person("Dirk Sites", role = "cph", comment = "Author of CLD2 C++ library")
+  )
+Description: CLD2 probabilistically detects over 80 languages in Unicode UTF-8 text, either 
+    plain text or HTML/XML. For mixed-language input, CLD2 returns the top three languages found
+    and their approximate percentages of the total text bytes (e.g. 80% English and 20% French 
+    out of 1000 bytes). 
+License: Apache License 2.0
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/ropensci/cld2 (devel)
+    https://github.com/CLD2Owners/cld2 (upstream)
+Imports: Rcpp
+LinkingTo: Rcpp
+RoxygenNote: 6.0.1.9000
+Roxygen: list(markdown = TRUE)
