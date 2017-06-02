@@ -15,9 +15,8 @@ detect_language_multi(text, plain_text = TRUE)
 \item{plain_text}{if \code{FALSE} then code skips HTML tags and expands HTML entities}
 }
 \description{
-The function \code{\link[=detect_language]{detect_language()}} function returns the best guess of the language of
-\code{text} or \code{NA} if the language could not reliablity be determinted.
-The function \code{\link[=detect_language_multi]{detect_language_multi()}} returns the top 3 candidate languages with
-a probability score, and also the total number of text bytes that was succesfully
-classified.
+The function \code{\link[=detect_language]{detect_language()}} guesses the language of \code{text} or returns \code{NA}
+if the language could not reliably be determined. The function \code{\link[=detect_language_multi]{detect_language_multi()}}
+shows the top 3 guessed languages including a relative probability score, and also shows
+the total number of text bytes that was reliably classified into either language.
 }
