@@ -6,7 +6,8 @@ Authors@R: c(
     person("Jeroen", "Ooms", ,"jeroen@berkeley.edu", role = c("aut", "cre")),
     person("Dirk Sites", role = "cph", comment = "Author of CLD2 C++ library")
   )
-Description: Bindings to Google's C++ library Compact Language Detector 2. Probabilistically
+Description: Bindings to Google's C++ library Compact Language Detector 2
+    (see <https://github.com/CLD2Owners/cld2#readme> for more information). Probabilistically
     detects over 80 languages in UTF-8 text (plain text or HTML). For mixed-language input it
     returns the top three languages and their approximate proportion of the total classified 
     text bytes (e.g. 80% English and 20% French out of 1000 bytes). 
