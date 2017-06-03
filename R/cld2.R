@@ -11,7 +11,7 @@
 #' @aliases cld2
 #' @export
 #' @rdname cld2
-#' @param text a string with text to guess.
+#' @param text a string with text to classify or a connection to read from
 #' @param plain_text if `FALSE` then code skips HTML tags and expands HTML entities
 #' @examples # Read text
 #' detect_language("To be or not to be")

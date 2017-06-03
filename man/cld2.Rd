@@ -11,7 +11,7 @@ detect_language(text, plain_text = TRUE)
 detect_language_multi(text, plain_text = TRUE)
 }
 \arguments{
-\item{text}{a string with text to guess.}
+\item{text}{a string with text to classify or a connection to read from}
 
 \item{plain_text}{if \code{FALSE} then code skips HTML tags and expands HTML entities}
 }
