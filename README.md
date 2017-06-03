@@ -37,4 +37,11 @@ cld2::detect_language("Nou breekt mijn klomp!")
 # [1] "DUTCH"
 ```
 
+Set `plain_text = FALSE` if your input contains HTML:
+
+```r
+cld2::detect_language(url('http://www.un.org/ar/universal-declaration-human-rights/'), plain_text = FALSE)
+# [1] "ARABIC"
+```
+ 
 [![](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)

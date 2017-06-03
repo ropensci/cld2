@@ -20,3 +20,12 @@ if the language could not reliably be determined. The function \code{\link[=dete
 shows the top 3 guessed languages including a relative probability score, and also shows
 the total number of text bytes that was reliably classified into either language.
 }
+\examples{
+# Read text
+detect_language("To be or not to be")
+detect_language("Ce n'est pas grave.")
+detect_language("Nou breekt mijn klomp!")
+
+# Read HTML
+detect_language(url('http://www.un.org/ar/universal-declaration-human-rights/'), plain_text = FALSE)
+}
