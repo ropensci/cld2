@@ -1,49 +1,25 @@
 # Upstream requires C++98 but we patched so it builds with C++11
 CXX_STD=CXX11
-PKG_LIBS=-L. -lcld2
+PKG_LIBS=-L. -lstatcld2
 
+# Compiles 'libcld2' as shown in src/internal/compile_libs.sh
+# Note that upstream also has 'libcld2_full.so' which is much larger
 LIBCLD2 = \
-	libcld2/internal/cld_generated_cjk_delta_bi_32.o \
-	libcld2/internal/cld_generated_cjk_delta_bi_4.o \
-	libcld2/internal/cld_generated_cjk_uni_prop_80.o \
-	libcld2/internal/cld_generated_score_quad_octa_0122_2.o \
-	libcld2/internal/cld_generated_score_quad_octa_0122.o \
-	libcld2/internal/cld_generated_score_quad_octa_1024_256.o \
-	libcld2/internal/cld_generated_score_quad_octa_2.o \
-	libcld2/internal/cld2_do_score.o \
-	libcld2/internal/cld2_generated_cjk_compatible.o \
-	libcld2/internal/cld2_generated_deltaocta0122.o \
-	libcld2/internal/cld2_generated_deltaocta0527.o \
-	libcld2/internal/cld2_generated_deltaoctachrome.o \
-	libcld2/internal/cld2_generated_distinctocta0122.o \
-	libcld2/internal/cld2_generated_distinctocta0527.o \
-	libcld2/internal/cld2_generated_distinctoctachrome.o \
-	libcld2/internal/cld2_generated_quad0122.o \
-	libcld2/internal/cld2_generated_quad0720.o \
-	libcld2/internal/cld2_generated_quadchrome_16.o \
-	libcld2/internal/cld2_generated_quadchrome_2.o \
-	libcld2/internal/cldutil_shared.o \
-	libcld2/internal/cldutil.o \
-	libcld2/internal/compact_lang_det_hint_code.o \
-	libcld2/internal/compact_lang_det_impl.o \
-	libcld2/internal/compact_lang_det.o \
-	libcld2/internal/debug_empty.o \
-	libcld2/internal/fixunicodevalue.o \
-	libcld2/internal/generated_distinct_bi_0.o \
-	libcld2/internal/generated_entities.o \
-	libcld2/internal/generated_language.o \
-	libcld2/internal/generated_ulscript.o \
-	libcld2/internal/getonescriptspan.o \
-	libcld2/internal/lang_script.o \
-	libcld2/internal/offsetmap.o \
-	libcld2/internal/scoreonescriptspan.o \
-	libcld2/internal/tote.o \
-	libcld2/internal/utf8statetable.o
+	libcld2/internal/cldutil.o libcld2/internal/cldutil_shared.o libcld2/internal/compact_lang_det.o \
+	libcld2/internal/compact_lang_det_hint_code.o libcld2/internal/compact_lang_det_impl.o \
+	libcld2/internal/debug.o libcld2/internal/fixunicodevalue.o libcld2/internal/generated_entities.o \
+	libcld2/internal/generated_language.o libcld2/internal/generated_ulscript.o \
+	libcld2/internal/getonescriptspan.o libcld2/internal/lang_script.o libcld2/internal/offsetmap.o \
+	libcld2/internal/scoreonescriptspan.o libcld2/internal/tote.o libcld2/internal/utf8statetable.o \
+	libcld2/internal/cld_generated_cjk_uni_prop_80.o libcld2/internal/cld2_generated_cjk_compatible.o \
+	libcld2/internal/cld_generated_cjk_delta_bi_4.o libcld2/internal/generated_distinct_bi_0.o  \
+	libcld2/internal/cld2_generated_quadchrome_2.o libcld2/internal/cld2_generated_deltaoctachrome.o \
+	libcld2/internal/cld2_generated_distinctoctachrome.o libcld2/internal/cld_generated_score_quad_octa_2.o
 
-all: clean libcld2.a
+all: clean libstatcld2.a
 
-libcld2.a: $(LIBCLD2)
-	$(AR) rcs libcld2.a $(LIBCLD2)
+libstatcld2.a: $(LIBCLD2)
+	$(AR) rcs libstatcld2.a $(LIBCLD2)
 
 clean:
-	rm -f  $(SHLIB) $(OBJECTS) $(LIBCLD2) libcld2.a
+	rm -f  $(SHLIB) $(OBJECTS) $(LIBCLD2) libstatcld2.a
