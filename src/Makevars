@@ -1,5 +1,5 @@
 # Upstream requires C++98 but we patched so it builds with C++11
-CXX_STD=CXX98
+CXX_STD=CXX11
 PKG_LIBS=-L. -lcld2
 
 LIBCLD2 = \
