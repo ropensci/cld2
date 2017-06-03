@@ -22,7 +22,8 @@
 #' detect_language(url('http://www.un.org/ar/universal-declaration-human-rights/'), plain_text = FALSE)
 #'
 #' # More detailed classification output
-#' detect_language_multi(url('http://www.un.org/fr/universal-declaration-human-rights/'), plain_text = FALSE)
+#' detect_language_multi(
+#'   url('http://www.un.org/fr/universal-declaration-human-rights/'), plain_text = FALSE)
 detect_language <- function(text, plain_text = TRUE){
   detect_language_cc(as_string(text), plain_text)
 }

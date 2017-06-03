@@ -31,5 +31,6 @@ detect_language("Nou breekt mijn klomp!")
 detect_language(url('http://www.un.org/ar/universal-declaration-human-rights/'), plain_text = FALSE)
 
 # More detailed classification output
-detect_language_multi(url('http://www.un.org/fr/universal-declaration-human-rights/'), plain_text = FALSE)
+detect_language_multi(
+  url('http://www.un.org/fr/universal-declaration-human-rights/'), plain_text = FALSE)
 }
