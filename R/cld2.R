@@ -18,20 +18,27 @@
 #' detect_language("Ce n'est pas grave.")
 #' detect_language("Nou breekt mijn klomp!")
 #'
+#' \dontrun{
 #' # Read HTML from connection
 #' detect_language(url('http://www.un.org/ar/universal-declaration-human-rights/'), plain_text = FALSE)
 #'
 #' # More detailed classification output
 #' detect_language_multi(
 #'   url('http://www.un.org/fr/universal-declaration-human-rights/'), plain_text = FALSE)
+#'
+#' detect_language_multi(
+#'   url('http://www.un.org/zh/universal-declaration-human-rights/'), plain_text = FALSE)
+#' }
 detect_language <- function(text, plain_text = TRUE){
-  detect_language_cc(as_string(text), plain_text)
+  toupper(detect_language_cc(as_string(text), plain_text))
 }
 
 #' @export
 #' @rdname cld2
 detect_language_multi <- function(text, plain_text = TRUE){
-  detect_language_multi_cc(as_string(text), plain_text)
+  out <- detect_language_multi_cc(as_string(text), plain_text)
+  out$classificaton$language <- toupper(out$classificaton$language)
+  out
 }
 
 as_string <- function(text){

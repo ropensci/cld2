@@ -42,17 +42,20 @@ Set `plain_text = FALSE` if your input contains HTML:
 ```r
 cld2::detect_language(url('http://www.un.org/ar/universal-declaration-human-rights/'), plain_text = FALSE)
 # [1] "ARABIC"
+
+cld2::detect_language(url('http://www.un.org/zh/universal-declaration-human-rights/'), plain_text = FALSE)
+# [1] "CHINESE"
 ```
 
 Use `detect_language_multi()` to get detailed classification output.
 
 ```r
 detect_language_multi(url('http://www.un.org/fr/universal-declaration-human-rights/'), plain_text = FALSE)
-# $guess
+# $classificaton
 #   language code latin proportion
-# 1   FRENCH   fr  TRUE        0.95
-# 2  ENGLISH   en  TRUE        0.04
-# 3   ARABIC   ar FALSE        0.00
+# 1   FRENCH   fr  TRUE       0.96
+# 2  ENGLISH   en  TRUE       0.03
+# 3   ARABIC   ar FALSE       0.00
 # 
 # $bytes
 # [1] 17008

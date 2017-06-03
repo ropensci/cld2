@@ -27,10 +27,15 @@ detect_language("To be or not to be")
 detect_language("Ce n'est pas grave.")
 detect_language("Nou breekt mijn klomp!")
 
+\dontrun{
 # Read HTML from connection
 detect_language(url('http://www.un.org/ar/universal-declaration-human-rights/'), plain_text = FALSE)
 
 # More detailed classification output
 detect_language_multi(
   url('http://www.un.org/fr/universal-declaration-human-rights/'), plain_text = FALSE)
+
+detect_language_multi(
+  url('http://www.un.org/zh/universal-declaration-human-rights/'), plain_text = FALSE)
+}
 }
