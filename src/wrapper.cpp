@@ -44,7 +44,7 @@ Rcpp::List detect_language_multi_cc(Rcpp::String input, bool plain_text = true){
     Rcpp::Named("language") = langs,
     Rcpp::Named("code") = codes,
     Rcpp::Named("latin") = latin,
-    Rcpp::Named("probability") = pct / 100
+    Rcpp::Named("proportion") = pct / 100
   );
   return Rcpp::List::create(
     Rcpp::Named("guess") = guesses,

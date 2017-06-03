@@ -43,5 +43,25 @@ Set `plain_text = FALSE` if your input contains HTML:
 cld2::detect_language(url('http://www.un.org/ar/universal-declaration-human-rights/'), plain_text = FALSE)
 # [1] "ARABIC"
 ```
+
+Use `detect_language_multi()` to get detailed classification output.
+
+```r
+detect_language_multi(url('http://www.un.org/fr/universal-declaration-human-rights/'), plain_text = FALSE)
+# $guess
+#   language code latin proportion
+# 1   FRENCH   fr  TRUE        0.95
+# 2  ENGLISH   en  TRUE        0.04
+# 3   ARABIC   ar FALSE        0.00
+# 
+# $bytes
+# [1] 17008
+# 
+# $reliabale
+# [1] TRUE
+```
+This shows the top 3 language guesses and the proportion of text that was classified as this language.
+The `bytes` attribute shows the total number of text bytes that was classified, and `reliable` is a 
+complex calculation on if the #1 language is some amount more probable then the second-best Language.
  
 [![](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
