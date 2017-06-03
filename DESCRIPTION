@@ -1,6 +1,6 @@
 Package: cld2
 Type: Package
-Title: R Wrapper for Google's Compact Language Detector 2
+Title: Google's Compact Language Detector 2
 Version: 0.1
 Authors@R: c(
     person("Jeroen", "Ooms", ,"jeroen@berkeley.edu", role = c("aut", "cre")),
