@@ -3,7 +3,7 @@ CXX_STD=CXX11
 PKG_LIBS=-L. -lstatcld2
 
 # Compiles 'libcld2' as shown in src/internal/compile_libs.sh
-# Note that upstream also has 'libcld2_full.so' which is much larger
+# Note that upstream also has 'libcld2_full.so' which might be more accurate but too large for CRAN
 LIBCLD2 = \
 	libcld2/internal/cldutil.o libcld2/internal/cldutil_shared.o libcld2/internal/compact_lang_det.o \
 	libcld2/internal/compact_lang_det_hint_code.o libcld2/internal/compact_lang_det_impl.o \
@@ -22,4 +22,4 @@ libstatcld2.a: $(LIBCLD2)
 	$(AR) rcs libstatcld2.a $(LIBCLD2)
 
 clean:
-	rm -f  $(SHLIB) $(OBJECTS) $(LIBCLD2) libstatcld2.a
+	rm -f $(SHLIB) $(OBJECTS) $(LIBCLD2) libstatcld2.a
