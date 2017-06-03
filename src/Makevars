@@ -1,3 +1,4 @@
+# Upstream requires C++98 but we patched so it builds with C++11
 CXX_STD=CXX98
 PKG_LIBS=-L. -lcld2
 
@@ -17,7 +18,6 @@ LIBCLD2 = \
 	libcld2/internal/cld2_generated_distinctocta0122.o \
 	libcld2/internal/cld2_generated_distinctocta0527.o \
 	libcld2/internal/cld2_generated_distinctoctachrome.o \
-	libcld2/internal/cld2_generated_octa2_dummy.o \
 	libcld2/internal/cld2_generated_quad0122.o \
 	libcld2/internal/cld2_generated_quad0720.o \
 	libcld2/internal/cld2_generated_quadchrome_16.o \
