@@ -2,9 +2,8 @@ context("CLD2")
 
 test_that("vectorised input works", {
   skip_on_os("solaris")
-  getNamespace('readtext')
-  DATA_DIR <- system.file("extdata/", package = "readtext")
-  rt7 <- readtext(paste0(DATA_DIR, "pdf/UDHR/*.pdf"),
+  DATA_DIR <- system.file("extdata", "pdf", "UDHR", package = "readtext")
+  rt7 <- readtext::readtext(sort(list.files(DATA_DIR, full.names = TRUE, pattern = "\\.pdf$")),
                    docvarsfrom = "filenames",
                    docvarnames = c("document", "language"))
   langs <- c("CHINESE", "CZECH", "DANISH", "ENGLISH", "FRENCH",
