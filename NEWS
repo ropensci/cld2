@@ -1,0 +1,6 @@
+1.1
+  - detect_language() is now vectorized
+  - detect_language_multi() has been renamed to detect_language_mixed()
+
+1.0
+  - Initial CRAN release

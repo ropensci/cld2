@@ -3,23 +3,27 @@
 \name{cld2}
 \alias{cld2}
 \alias{detect_language}
+\alias{detect_language_mixed}
 \alias{detect_language_multi}
 \title{Compact Language Detector 2}
 \usage{
-detect_language(text, plain_text = TRUE)
+detect_language(text, plain_text = TRUE, lang_code = FALSE)
 
-detect_language_multi(text, plain_text = TRUE)
+detect_language_mixed(text, plain_text = TRUE)
 }
 \arguments{
 \item{text}{a string with text to classify or a connection to read from}
 
 \item{plain_text}{if \code{FALSE} then code skips HTML tags and expands HTML entities}
+
+\item{lang_code}{return a language code instead of name}
 }
 \description{
-The function \code{\link[=detect_language]{detect_language()}} guesses the language of \code{text} or returns \code{NA}
-if the language could not reliably be determined. The function \code{\link[=detect_language_multi]{detect_language_multi()}}
-shows the top 3 guessed languages including a relative probability score, and also shows
-the total number of text bytes that was reliably classified.
+The function \code{\link[=detect_language]{detect_language()}} is vectorised and guesses the the language of each string
+in \code{text} or returns \code{NA} if the language could not reliably be determined. The function
+\code{\link[=detect_language_multi]{detect_language_multi()}} is not vectorised and analyses the entire character vector as a
+whole. The output includes the top 3 detected languages including the relative proportion
+and the total number of text bytes that was reliably classified.
 }
 \examples{
 # Read text

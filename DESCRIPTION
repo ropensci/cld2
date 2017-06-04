@@ -1,13 +1,13 @@
 Package: cld2
 Type: Package
 Title: Google's Compact Language Detector 2
-Version: 1.0
+Version: 1.0.9000
 Authors@R: c(
     person("Jeroen", "Ooms", ,"jeroen@berkeley.edu", role = c("aut", "cre")),
     person("Dirk Sites", role = "cph", comment = "Author of CLD2 C++ library")
   )
 Description: Bindings to Google's C++ library Compact Language Detector 2
-    (see <https://github.com/CLD2Owners/cld2#readme> for more information). Probabilistically
+    (see <https://github.com/cld2owners/cld2#readme> for more information). Probabilistically
     detects over 80 languages in UTF-8 text (plain text or HTML). For mixed-language input it
     returns the top three languages and their approximate proportion of the total classified 
     text bytes (e.g. 80% English and 20% French out of 1000 bytes). 
@@ -15,9 +15,11 @@ License: Apache License 2.0
 Encoding: UTF-8
 LazyData: true
 URL: https://github.com/ropensci/cld2 (devel)
-    https://github.com/CLD2Owners/cld2 (upstream)
+    https://github.com/cld2owners/cld2 (upstream)
 Imports: Rcpp
 LinkingTo: Rcpp
 RoxygenNote: 6.0.1
 Roxygen: list(markdown = TRUE)
-Suggests: testthat
+Suggests: 
+    testthat,
+    readtext

@@ -7,16 +7,18 @@
 /* Super simple api, returns language as string if pretty certain, otherwise NA */
 
 // [[Rcpp::export]]
-Rcpp::CharacterVector detect_language_cc(Rcpp::String input, bool plain_text = true){
-  input.set_encoding(CE_UTF8);
-  std::string buf(input);
-  bool is_reliable;
-  CLD2::Language lang = CLD2::DetectLanguage(buf.c_str(), buf.length(), plain_text, &is_reliable);
-  if(!is_reliable)
-    return NA_STRING;
-  Rcpp::CharacterVector out(LanguageName(lang));
-  out.attr("code") = Rcpp::String(LanguageCode(lang));
-  return out;
+Rcpp::CharacterVector detect_language_cc(Rcpp::CharacterVector input, bool plain_text = true, bool lang_code = false){
+  Rcpp::CharacterVector output(input.length());
+  for(size_t i = 0; i < input.length(); i++){
+    bool is_reliable;
+    std::string buf(input[i]);
+    CLD2::Language lang = CLD2::DetectLanguage(buf.c_str(), buf.length(), plain_text, &is_reliable);
+    if(!is_reliable)
+      output[i] = NA_STRING;
+    else
+      output[i] = lang_code ? LanguageCode(lang) : LanguageName(lang);
+  }
+  return output;
 }
 
 /* Pro API: return all data */
