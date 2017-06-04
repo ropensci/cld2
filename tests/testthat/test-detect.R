@@ -1,7 +1,8 @@
 context("CLD2")
 
 test_that("vectorised input works", {
-  library(readtext)
+  skip_on_os("solaris")
+  getNamespace('readtext')
   DATA_DIR <- system.file("extdata/", package = "readtext")
   rt7 <- readtext(paste0(DATA_DIR, "pdf/UDHR/*.pdf"),
                    docvarsfrom = "filenames",
@@ -16,6 +17,7 @@ test_that("vectorised input works", {
 })
 
 test_that("language detection is accurate", {
+  skip_on_os("solaris")
   expect_equal(detect_language("To be or not to be"), "ENGLISH")
   expect_equal(detect_language("Ce n'est pas grave."), "FRENCH")
   expect_equal(detect_language("Nou breekt mijn klomp!"),"DUTCH")
