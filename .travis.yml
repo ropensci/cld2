@@ -20,6 +20,8 @@ matrix:
 addons:
   apt:
     packages:
+      - libpoppler-cpp-dev
+      - libapparmor-dev
       - valgrind
 
 r_github_packages:
