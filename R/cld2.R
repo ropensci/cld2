@@ -16,19 +16,18 @@
 #' @param plain_text if `FALSE` then code skips HTML tags and expands HTML entities
 #' @param lang_code return a language code instead of name
 #' @examples # Read text
-#' detect_language("To be or not to be")
-#' detect_language("Ce n'est pas grave.")
-#' detect_language("Nou breekt mijn klomp!")
+#' text <- c("To be or not to be?", "Ce n'est pas grave.", "Nou breekt mijn klomp!")
+#' detect_language(text)
 #'
 #' \dontrun{
 #' # Read HTML from connection
 #' detect_language(url('http://www.un.org/ar/universal-declaration-human-rights/'), plain_text = FALSE)
 #'
 #' # More detailed classification output
-#' detect_language_multi(
+#' detect_language_mixed(
 #'   url('http://www.un.org/fr/universal-declaration-human-rights/'), plain_text = FALSE)
 #'
-#' detect_language_multi(
+#' detect_language_mixed(
 #'   url('http://www.un.org/zh/universal-declaration-human-rights/'), plain_text = FALSE)
 #' }
 detect_language <- function(text, plain_text = TRUE, lang_code = FALSE){
