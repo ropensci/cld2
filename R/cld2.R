@@ -15,7 +15,7 @@
 #' @param text a string with text to classify or a connection to read from
 #' @param plain_text if `FALSE` then code skips HTML tags and expands HTML entities
 #' @param lang_code return a language code instead of name
-#' @examples # Read text
+#' @examples # Vectorized function
 #' text <- c("To be or not to be?", "Ce n'est pas grave.", "Nou breekt mijn klomp!")
 #' detect_language(text)
 #'

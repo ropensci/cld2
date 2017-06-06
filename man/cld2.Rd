@@ -26,7 +26,7 @@ whole. The output includes the top 3 detected languages including the relative p
 and the total number of text bytes that was reliably classified.
 }
 \examples{
-# Read text
+# Vectorized function
 text <- c("To be or not to be?", "Ce n'est pas grave.", "Nou breekt mijn klomp!")
 detect_language(text)
 
