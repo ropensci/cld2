@@ -20,8 +20,9 @@ matrix:
 addons:
   apt:
     packages:
-      - libpoppler-cpp-dev
-      - libapparmor-dev
+      - libprotobuf-dev
+      - libprotoc-dev
+      - protobuf-compiler
       - valgrind
 
 r_github_packages:
