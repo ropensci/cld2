@@ -7,23 +7,15 @@ matrix:
     - os: linux
       dist: precise
       sudo: false
+      env: _R_CHECK_FORCE_SUGGESTS_=false
     - os: linux
       dist: trusty
       env: R_CODECOV=true
-      r_check_args: '--use-valgrind'
     - os: osx
       osx_image: xcode8.3
     - os: osx
       osx_image: xcode7.3
       disable_homebrew: true
-
-addons:
-  apt:
-    packages:
-      - libprotobuf-dev
-      - libprotoc-dev
-      - protobuf-compiler
-      - valgrind
 
 r_github_packages:
   - jimhester/covr
