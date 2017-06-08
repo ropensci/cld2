@@ -7,7 +7,7 @@
 \alias{detect_language_multi}
 \title{Compact Language Detector 2}
 \usage{
-detect_language(text, plain_text = TRUE, lang_code = FALSE)
+detect_language(text, plain_text = TRUE, lang_code = TRUE)
 
 detect_language_mixed(text, plain_text = TRUE)
 }

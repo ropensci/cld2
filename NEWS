@@ -1,5 +1,6 @@
 1.1
   - detect_language() is now vectorized
+  - detect_language() now returns codes by default to be compatible with 'cld3'
   - detect_language_multi() has been renamed to detect_language_mixed()
 
 1.0

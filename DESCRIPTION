@@ -10,7 +10,8 @@ Description: Bindings to Google's C++ library Compact Language Detector 2
     (see <https://github.com/cld2owners/cld2#readme> for more information). Probabilistically
     detects over 80 languages in plain text or HTML. For mixed-language input it returns the
     top three detected languages and their approximate proportion of the total classified 
-    text bytes (e.g. 80% English and 20% French out of 1000 bytes). 
+    text bytes (e.g. 80% English and 20% French out of 1000 bytes). There is also a 'cld3'
+    package on CRAN which uses a neural network model instead.
 License: Apache License 2.0
 Encoding: UTF-8
 LazyData: true
@@ -22,4 +23,5 @@ RoxygenNote: 6.0.1
 Roxygen: list(markdown = TRUE)
 Suggests: 
     testthat,
-    readtext
+    readtext,
+    cld3
