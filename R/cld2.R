@@ -36,14 +36,19 @@ detect_language <- function(text, plain_text = TRUE, lang_code = TRUE){
     if(!length(text))
       stop("Argument 'text' does not contain a 'text' column.")
   }
-  detect_language_cc(as_string(text), plain_text, lang_code)
+  out <- detect_language_cc(as_string(text), plain_text, lang_code)
+  if(!isTRUE(lang_code))
+    out <- toupper(out)
+  out
 }
 
 #' @export
 #' @aliases detect_language_multi
 #' @rdname cld2
 detect_language_mixed <- function(text, plain_text = TRUE){
-  detect_language_multi_cc(as_string(text, vectorize = FALSE), plain_text)
+  out <- detect_language_multi_cc(as_string(text, vectorize = FALSE), plain_text)
+  out$classificaton$language <- toupper(out$classificaton$language)
+  out
 }
 
 # Old name

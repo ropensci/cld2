@@ -9,15 +9,15 @@ test_that("vectorised input works", {
   langs <- c("CHINESE", "CZECH", "DANISH", "ENGLISH", "FRENCH",
         "GREEK", "HUNGARIAN", "IRISH", "JAPANESE", "RUSSIAN", NA)
   codes <- c("zh", "cs", "da", "en", "fr", "el", "hu", "ga", "ja", "ru", NA)
-  expect_equal(detect_language(rt7), langs)
+  expect_equal(detect_language(rt7, lang_code = FALSE), langs)
   expect_equal(detect_language(rt7, lang_code = TRUE), codes)
-  expect_equal(detect_language(rt7$text), langs)
+  expect_equal(detect_language(rt7$text, lang_code = FALSE), langs)
   expect_equal(detect_language(rt7$text, lang_code = TRUE), codes)
 })
 
 test_that("language detection is accurate", {
   skip_on_os("solaris")
-  expect_equal(detect_language("To be or not to be"), "ENGLISH")
-  expect_equal(detect_language("Ce n'est pas grave."), "FRENCH")
-  expect_equal(detect_language("Nou breekt mijn klomp!"),"DUTCH")
+  expect_equal(detect_language("To be or not to be"), "en")
+  expect_equal(detect_language("Ce n'est pas grave."), "fr")
+  expect_equal(detect_language("Nou breekt mijn klomp!"),"nl")
 })
