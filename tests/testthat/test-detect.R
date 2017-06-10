@@ -16,7 +16,8 @@ test_that("vectorised input works", {
 })
 
 test_that("language detection is accurate", {
-  skip_on_os("solaris")
+  # Doesn't work on sparc
+  skip_if_not(.Platform$endian == "little")
   expect_equal(detect_language("To be or not to be"), "en")
   expect_equal(detect_language("Ce n'est pas grave."), "fr")
   expect_equal(detect_language("Nou breekt mijn klomp!"),"nl")
