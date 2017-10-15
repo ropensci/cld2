@@ -47,10 +47,10 @@ cld2::detect_language(url('http://www.un.org/zh/universal-declaration-human-righ
 # [1] "CHINESE"
 ```
 
-Use `detect_language_multi()` to get detailed classification output.
+Use `detect_language_mixed()` to get detailed classification output.
 
 ```r
-detect_language_multi(url('http://www.un.org/fr/universal-declaration-human-rights/'), plain_text = FALSE)
+detect_language_mixed(url('http://www.un.org/fr/universal-declaration-human-rights/'), plain_text = FALSE)
 # $classificaton
 #   language code latin proportion
 # 1   FRENCH   fr  TRUE       0.96
