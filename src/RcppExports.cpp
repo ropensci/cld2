@@ -7,7 +7,7 @@ using namespace Rcpp;
 
 // detect_language_cc
 Rcpp::CharacterVector detect_language_cc(Rcpp::CharacterVector input, bool plain_text, bool lang_code);
-RcppExport SEXP cld2_detect_language_cc(SEXP inputSEXP, SEXP plain_textSEXP, SEXP lang_codeSEXP) {
+RcppExport SEXP _cld2_detect_language_cc(SEXP inputSEXP, SEXP plain_textSEXP, SEXP lang_codeSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -20,7 +20,7 @@ END_RCPP
 }
 // detect_language_multi_cc
 Rcpp::List detect_language_multi_cc(Rcpp::String input, bool plain_text);
-RcppExport SEXP cld2_detect_language_multi_cc(SEXP inputSEXP, SEXP plain_textSEXP) {
+RcppExport SEXP _cld2_detect_language_multi_cc(SEXP inputSEXP, SEXP plain_textSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -32,8 +32,8 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"cld2_detect_language_cc", (DL_FUNC) &cld2_detect_language_cc, 3},
-    {"cld2_detect_language_multi_cc", (DL_FUNC) &cld2_detect_language_multi_cc, 2},
+    {"_cld2_detect_language_cc", (DL_FUNC) &_cld2_detect_language_cc, 3},
+    {"_cld2_detect_language_multi_cc", (DL_FUNC) &_cld2_detect_language_multi_cc, 2},
     {NULL, NULL, 0}
 };
 

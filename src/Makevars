@@ -1,6 +1,6 @@
 # Upstream requires C++98 but we patched so it builds with C++11
 CXX_STD=CXX11
-PKG_LIBS=-L. -lstatcld2
+PKG_LIBS=-Llibcld2 -lstatcld2
 
 # Compiles 'libcld2' as shown in src/internal/compile_libs.sh
 # Note that upstream also has 'libcld2_full.so' which might be more accurate but too large for CRAN
@@ -16,10 +16,14 @@ LIBCLD2 = \
 	libcld2/internal/cld2_generated_quadchrome_2.o libcld2/internal/cld2_generated_deltaoctachrome.o \
 	libcld2/internal/cld2_generated_distinctoctachrome.o libcld2/internal/cld_generated_score_quad_octa_2.o
 
-all: clean libstatcld2.a
+all: clean
 
-libstatcld2.a: $(LIBCLD2)
-	$(AR) rcs libstatcld2.a $(LIBCLD2)
+STATLIB = libcld2/libstatcld2.a
+
+$(SHLIB): $(STATLIB)
+
+$(STATLIB): $(LIBCLD2)
+	$(AR) rcs $(STATLIB) $(LIBCLD2)
 
 clean:
-	rm -f $(SHLIB) $(OBJECTS) $(LIBCLD2) libstatcld2.a
+	rm -f $(SHLIB) $(OBJECTS) $(LIBCLD2) $(STATLIB)

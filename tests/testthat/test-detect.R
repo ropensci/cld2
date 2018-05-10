@@ -2,6 +2,7 @@ context("CLD2")
 
 test_that("vectorised input works", {
   skip_on_os("solaris")
+  library(readtext)
   DATA_DIR <- system.file("extdata", "pdf", "UDHR", package = "readtext")
   rt7 <- readtext::readtext(sort(list.files(DATA_DIR, full.names = TRUE, pattern = "\\.pdf$")),
                    docvarsfrom = "filenames",

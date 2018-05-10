@@ -2,6 +2,7 @@
 *.o
 *.dll
 *.out
+*.a
 *.out.dSYM
 .DS_Store
 .Rproj.user

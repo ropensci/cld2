@@ -2,6 +2,7 @@
 ^\.Rproj\.user$
 ^src/readme.txt$
 ^src/.*\.a$
+^src/libcld2/.*\.a$
 ^src/.*\.o$
 ^src/a.out.dSYM$
 ^.travis.yml$

@@ -2,10 +2,10 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 detect_language_cc <- function(input, plain_text = TRUE, lang_code = FALSE) {
-    .Call('cld2_detect_language_cc', PACKAGE = 'cld2', input, plain_text, lang_code)
+    .Call('_cld2_detect_language_cc', PACKAGE = 'cld2', input, plain_text, lang_code)
 }
 
 detect_language_multi_cc <- function(input, plain_text = TRUE) {
-    .Call('cld2_detect_language_multi_cc', PACKAGE = 'cld2', input, plain_text)
+    .Call('_cld2_detect_language_multi_cc', PACKAGE = 'cld2', input, plain_text)
 }
 
