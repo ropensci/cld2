@@ -52,7 +52,7 @@ Use `detect_language_multi()` to get detailed classification output.
 
 ```r
 detect_language_multi(url('http://www.un.org/fr/universal-declaration-human-rights/'), plain_text = FALSE)
-# $classificaton
+# $classification
 #   language code latin proportion
 # 1   FRENCH   fr  TRUE       0.96
 # 2  ENGLISH   en  TRUE       0.03
