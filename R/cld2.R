@@ -47,7 +47,7 @@ detect_language <- function(text, plain_text = TRUE, lang_code = TRUE){
 #' @rdname cld2
 detect_language_mixed <- function(text, plain_text = TRUE){
   out <- detect_language_multi_cc(as_string(text, vectorize = FALSE), plain_text)
-  out$classificaton$language <- toupper(out$classificaton$language)
+  out$classification$language <- toupper(out$classification$language)
   out
 }
 

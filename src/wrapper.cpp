@@ -50,7 +50,7 @@ Rcpp::List detect_language_multi_cc(Rcpp::String input, bool plain_text = true){
     Rcpp::Named("stringsAsFactors") = false
   );
   return Rcpp::List::create(
-    Rcpp::Named("classificaton") = guesses,
+    Rcpp::Named("classification") = guesses,
     Rcpp::Named("bytes") = text_bytes,
     Rcpp::Named("reliabale") = is_reliable
   );
