@@ -1,8 +1,8 @@
 context("CLD2")
 
 test_that("vectorised input works", {
-  skip_on_os("solaris")
-  library(readtext)
+  skip_on_cran()
+  skip_if_not(require(readtext))
   DATA_DIR <- system.file("extdata", "pdf", "UDHR", package = "readtext")
   rt7 <- readtext::readtext(sort(list.files(DATA_DIR, full.names = TRUE, pattern = "\\.pdf$")),
                    docvarsfrom = "filenames",
@@ -18,6 +18,7 @@ test_that("vectorised input works", {
 
 test_that("language detection is accurate", {
   # Doesn't work on sparc
+  skip_on_cran()
   skip_if_not(.Platform$endian == "little")
   expect_equal(detect_language("To be or not to be"), "en")
   expect_equal(detect_language("Ce n'est pas grave."), "fr")

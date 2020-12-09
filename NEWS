@@ -1,3 +1,7 @@
+1.2.1
+  - Fix an UBSAN problem in the example
+  - Do not run tests if 'readtext' is not unavailable (BDR)
+
 1.1
   - detect_language() is now vectorized
   - detect_language() now returns codes by default to be compatible with 'cld3'

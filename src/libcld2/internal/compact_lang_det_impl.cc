@@ -1156,7 +1156,7 @@ void RefineScoredClosePairs(DocTote* doc_tote,
                             bool FLAGS_cld2_html, bool FLAGS_cld2_quiet) {
   for (int sub = 0; sub < doc_tote->MaxSize(); ++sub) {
     int close_packedlang = doc_tote->Key(sub);
-    int subscr = LanguageCloseSet(static_cast<Language>(close_packedlang));
+    int subscr = close_packedlang > NUM_LANGUAGES ? 0 : LanguageCloseSet(static_cast<Language>(close_packedlang));
     if (subscr == 0) {continue;}
 
     // We have a close pair language -- if the other one is also scored and the
