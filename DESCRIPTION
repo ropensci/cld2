@@ -15,7 +15,7 @@ Description: Bindings to Google's C++ library Compact Language Detector 2
 License: Apache License 2.0
 Encoding: UTF-8
 LazyData: true
-URL: https://docs.ropensci.org/cld2,  https://github.com/ropensci/cld2 (devel)
+URL: https://docs.ropensci.org/cld2/ (docs)  https://github.com/ropensci/cld2 (devel)
     https://github.com/cld2owners/cld2 (upstream)
 Imports: Rcpp
 LinkingTo: Rcpp
