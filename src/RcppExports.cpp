@@ -5,6 +5,11 @@
 
 using namespace Rcpp;
 
+#ifdef RCPP_USE_GLOBAL_ROSTREAM
+Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
+Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
+#endif
+
 // detect_language_cc
 Rcpp::CharacterVector detect_language_cc(Rcpp::CharacterVector input, bool plain_text, bool lang_code);
 RcppExport SEXP _cld2_detect_language_cc(SEXP inputSEXP, SEXP plain_textSEXP, SEXP lang_codeSEXP) {
