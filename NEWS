@@ -1,3 +1,6 @@
+1.2.2
+  - Fix Wnon-c-typedef-for-linkage compiler warnings
+
 1.2.1
   - Fix an UBSAN problem in the example
   - Do not run tests if 'readtext' is not unavailable (BDR)
