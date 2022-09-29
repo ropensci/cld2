@@ -462,7 +462,7 @@ void CLD2_Debug2(const char* text,
 
 void DumpResultChunkVector(FILE* f, const char* src,
                            ResultChunkVector* resultchunkvector) {
-  fprintf(f, "DumpResultChunkVector[%ld]<br>\n", resultchunkvector->size());
+  fprintf(f, "DumpResultChunkVector[%ld]<br>\n", (long int) resultchunkvector->size());
   for (int i = 0; i < static_cast<int>(resultchunkvector->size()); ++i) {
     ResultChunk* rc = &(*resultchunkvector)[i];
     Language lang1 = static_cast<Language>(rc->lang1);

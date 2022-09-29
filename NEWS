@@ -1,3 +1,6 @@
+1.2.3
+  - Fix a wformat warning on Windows
+
 1.2.2
   - Fix Wnon-c-typedef-for-linkage compiler warnings
 
