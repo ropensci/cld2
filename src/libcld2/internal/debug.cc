@@ -89,7 +89,7 @@ string FmtLP(ULScript ulscript, uint8 pslang, uint8 qprob) {
   retval.clear();
   Language lang = FromPerScriptNumber(ulscript, pslang);
   char temp[16];
-  sprintf(temp, "%s.%d", LanguageCode(lang), qprob);
+  snprintf(temp, 16, "%s.%d", LanguageCode(lang), qprob);
   retval.append(temp);
   return retval;
 }
@@ -250,7 +250,7 @@ string GetHtmlEscapedText(const string& txt) {
 
 string GetColorHtmlEscapedText(Language lang, const string& txt) {
   char temp[64];
-  sprintf(temp, " <span style=\"background:#%06X;color:#%06X;\">\n",
+  snprintf(temp, 64, " <span style=\"background:#%06X;color:#%06X;\">\n",
           GetBackColor(lang, false),
           GetTextColor(lang, false));
   string esc_txt = string(temp);
@@ -261,7 +261,7 @@ string GetColorHtmlEscapedText(Language lang, const string& txt) {
 
 string GetLangColorHtmlEscapedText(Language lang, const string& txt) {
   char temp[64];
-  sprintf(temp, "[%s]", LanguageCode(lang));
+  snprintf(temp, 64, "[%s]", LanguageCode(lang));
   string esc_txt = string(temp);
   esc_txt.append(GetColorHtmlEscapedText(lang, txt));
   return esc_txt;

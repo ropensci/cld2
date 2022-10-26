@@ -2113,7 +2113,7 @@ static char temp_detectlanguageversion[32];
 // String is "code_version - data_build_date"
 const char* DetectLanguageVersion() {
   if (kScoringtables.quadgram_obj == NULL) {return "";}
-  sprintf(temp_detectlanguageversion,
+  snprintf(temp_detectlanguageversion, 32,
           "V2.0 - %u", kScoringtables.quadgram_obj->kCLDTableBuildDate);
   return temp_detectlanguageversion;
 }

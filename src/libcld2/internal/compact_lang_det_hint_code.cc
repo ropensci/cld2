@@ -1511,7 +1511,7 @@ string DumpCLDLangPriors(const CLDLangPriors* langpriors) {
   string retval;
   for (int i = 0; i < langpriors->n; ++i) {
     char temp[64];
-    sprintf(temp, "%s.%d ",
+    snprintf(temp, 64, "%s.%d ",
              LanguageCode(GetCLDPriorLang(langpriors->prior[i])),
              GetCLDPriorWeight(langpriors->prior[i]));
     retval.append(temp);
