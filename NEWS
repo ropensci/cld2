@@ -1,3 +1,6 @@
+1.2.4
+  - Fix sprintf() deprecation warnings for CRAN
+
 1.2.3
   - Fix a wformat warning on Windows
 
