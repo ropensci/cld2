@@ -37,5 +37,7 @@ jobs:
           cargo --version
           sudo mv /usr/local/Homebrew /usr/local/oldhomebrew
           cargo --version
-          #sudo mv /usr/local/Cellar /usr/local/oldcellar
+          sudo mv /usr/local/Cellar /usr/local/oldcellar
+          sudo mkdir -p /usr/local/Cellar
+          sudo mv /usr/local/oldcellar/rustup-init /usr/local/Cellar/
           cargo --version
