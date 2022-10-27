@@ -28,7 +28,7 @@ jobs:
       - shell: bash
         run: |
           cargo --version
-          for pkg in $(brew list --formula); do
+          for pkg in $(brew list --formula | grep -vE '^rustup'); do
             echo "Removing $pkg"
             brew unlink $pkg || true
             cargo --version
