@@ -33,3 +33,9 @@ jobs:
             brew unlink $pkg || true
             cargo --version
           done
+          sudo rm -vf $(which brew)
+          cargo --version
+          sudo mv /usr/local/Homebrew /usr/local/oldhomebrew
+          cargo --version
+          sudo mv /usr/local/Cellar /usr/local/oldcellar
+          cargo --version
