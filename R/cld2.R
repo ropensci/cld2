@@ -2,7 +2,7 @@
 #'
 #' The function [detect_language()] is vectorised and guesses the the language of each string
 #' in `text` or returns `NA` if the language could not reliably be determined. The function
-#' [detect_language_multi()] is not vectorised and analyses the entire character vector as a
+#' [detect_language_mixed()] is not vectorised and analyses the entire character vector as a
 #' whole. The output includes the top 3 detected languages including the relative proportion
 #' and the total number of text bytes that was reliably classified.
 #'
