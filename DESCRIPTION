@@ -3,7 +3,7 @@ Type: Package
 Title: Google's Compact Language Detector 2
 Version: 1.2.4
 Authors@R: c(
-    person("Jeroen", "Ooms", ,"jeroen@berkeley.edu", role = c("aut", "cre"),
+    person("Jeroen", "Ooms", ,"jeroenooms@gmail.com", role = c("aut", "cre"),
       comment = c(ORCID = "0000-0002-4035-0289")),
     person("Dirk Sites", role = "cph", comment = "Author of CLD2 C++ library"))
 Description: Bindings to Google's C++ library Compact Language Detector 2
