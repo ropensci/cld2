@@ -1,5 +1,4 @@
 # Upstream requires C++98 but we patched so it builds with C++11
-CXX_STD=CXX11
 PKG_LIBS=-Llibcld2 -lstatcld2
 
 # Compiles 'libcld2' as shown in src/internal/compile_libs.sh
