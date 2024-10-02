@@ -1,7 +1,7 @@
 Package: cld2
 Type: Package
 Title: Google's Compact Language Detector 2
-Version: 1.2.4
+Version: 1.2.5
 Authors@R: c(
     person("Jeroen", "Ooms", ,"jeroenooms@gmail.com", role = c("aut", "cre"),
       comment = c(ORCID = "0000-0002-4035-0289")),
