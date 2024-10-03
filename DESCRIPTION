@@ -14,8 +14,9 @@ Description: Bindings to Google's C++ library Compact Language Detector 2
     package on CRAN which uses a neural network model instead.
 License: Apache License 2.0
 Encoding: UTF-8
-URL: https://docs.ropensci.org/cld2/ (docs)  https://github.com/ropensci/cld2 (devel)
-    https://github.com/cld2owners/cld2 (upstream)
+URL: https://docs.ropensci.org/cld2/
+    https://ropensci.r-universe.dev/cld2
+BugReports: https://github.com/ropensci/cld2/issues
 Imports: Rcpp
 LinkingTo: Rcpp
 RoxygenNote: 6.0.1
