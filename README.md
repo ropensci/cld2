@@ -2,10 +2,10 @@
 
 ##### *R Wrapper for Google's Compact Language Detector 2*
 
-[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
-[![Build Status](https://travis-ci.org/ropensci/cld2.svg?branch=master)](https://travis-ci.org/ropensci/cld2)
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![Build Status](https://app.travis-ci.com/ropensci/cld2.svg?branch=master)](https://app.travis-ci.com/ropensci/cld2)
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/cld2?branch=master&svg=true)](https://ci.appveyor.com/project/jeroen/cld2)
-[![Coverage Status](https://codecov.io/github/ropensci/cld2/coverage.svg?branch=master)](https://codecov.io/github/ropensci/cld2?branch=master)
+[![Coverage Status](https://codecov.io/github/ropensci/cld2/coverage.svg?branch=master)](https://app.codecov.io/github/ropensci/cld2?branch=master)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/cld2)](https://cran.r-project.org/package=cld2)
 [![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/cld2)](https://cran.r-project.org/package=cld2)
 [![Github Stars](https://img.shields.io/github/stars/ropensci/cld2.svg?style=social&label=Github)](https://github.com/ropensci/cld2)
@@ -68,4 +68,4 @@ This shows the top 3 language guesses and the proportion of text that was classi
 The `bytes` attribute shows the total number of text bytes that was classified, and `reliable` is a 
 complex calculation on if the #1 language is some amount more probable then the second-best Language.
  
-[![](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
+[![](https://ropensci.org//public_images/github_footer.png)](https://ropensci.org/)
