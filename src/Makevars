@@ -22,7 +22,10 @@ STATLIB = libcld2/libstatcld2.a
 $(SHLIB): $(STATLIB)
 
 $(STATLIB): $(LIBCLD2)
-	$(AR) rcs $(STATLIB) $(LIBCLD2)
 
 cleanup: $(SHLIB)
 	@rm -f $(LIBCLD2) $(STATLIB)
+
+# On Windows this rule is masked by Makeconf in base R
+%.a:
+	@$(AR) crs $@ $^ && $(STRIP_STATIC_LIB) $@ || true
